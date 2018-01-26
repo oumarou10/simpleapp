@@ -24,7 +24,7 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::post('/contact', 'MessageControle@message');
+Route::post('/contact', 'MessagesController@Post');
 
 
 Route::get('/about', function () {

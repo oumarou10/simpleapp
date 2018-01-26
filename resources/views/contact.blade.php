@@ -18,6 +18,11 @@
         </div>
 
         <div class="form-group">
+            {{ Form::label('message', 'Your message') }}
+            {{ Form::textarea('message', '', ['class' => 'form-control', 'placeholder' => 'enter your message']) }}
+        </div>
+
+        <div class="form-group">
             {{ Form::submit('Click Me!') , ['class' => 'btn btn-primary']}}
         </div>
 
