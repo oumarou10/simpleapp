@@ -10,8 +10,11 @@
     </head>
     <body>
         <div class="container">
+
             @include('inc.nav')
-            @include('inc.showcase')
+            @if(\Request::is('/'))
+                @include('inc.showcase')
+            @endif
             <div class="row">
                 <div class="col-md-8">
                     @yield('content')

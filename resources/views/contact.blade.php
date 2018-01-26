@@ -4,5 +4,22 @@
 
 @section('content')
     <h1>Contact</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at blanditiis dolorum ducimus nam pariatur, perspiciatis placeat quae soluta voluptatum. Animi assumenda eos esse eum id numquam optio quas, quasi.</p>
+
+    {!! Form::open(['url' => 'contact', 'method' => 'post']) !!}
+
+        <div class="form-group">
+            {{ Form::label('name', 'Enter your name') }}
+            {{ Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'enter your name']) }}
+        </div>
+
+        <div class="form-group">
+            {{ Form::label('email', 'E-Mail Address') }}
+            {{ Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'enter your email']) }}
+        </div>
+
+        <div class="form-group">
+            {{ Form::submit('Click Me!') , ['class' => 'btn btn-primary']}}
+        </div>
+
+    {!! Form::close() !!}
 @endsection
